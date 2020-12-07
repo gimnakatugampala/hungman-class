@@ -65,7 +65,7 @@ function showNotification(){
 }
 
 //keydown letter press
-window.addEventListener('keydown',e =>{
+wordEl.addEventListener('keydown',e =>{
     if(e.keyCode >= 65 && e.keyCode <= 90){
         const letter = e.key;
 

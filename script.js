@@ -7,7 +7,7 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['migara','bryan','sandro','munaj','roshan','sahasra','manjula sir','kapila sir','aadhil','akash','sanduni','aadhya','sahassrika','azmi','seneka','salma','azeeza','afra'];
+const words = ['migara','bryan','sandro','munaj','roshan','sahasra','manjula','kapila','aadhil','akash','sanduni','aadhya','sahassrika','azmi','seneka','salma','azeeza','afra'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -50,7 +50,7 @@ function updateWrongLetterEl(){
 
     //Check if lost
     if(wrongLetters.length === figureParts.length){
-         finalMessage.innerText = `Unfortunately you lost. 😌`;
+         finalMessage.innerText = `Unfortunately you lost. 😌 ${select}`;
          popup.style.display = 'flex';
     }
 }
@@ -65,7 +65,7 @@ function showNotification(){
 }
 
 //keydown letter press
-wordEl.addEventListener('keyup',e =>{
+window.addEventListener('keydown',e =>{
     if(e.keyCode >= 65 && e.keyCode <= 90){
         const letter = e.key;
 
